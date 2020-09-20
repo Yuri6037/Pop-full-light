@@ -80,6 +80,9 @@ headerbar,
 
   &:backdrop {
     border-color: mix(darken($inkstone, 11%), darken($inkstone, 1%), 80%);
+    @if ($variant == 'light') {
+      border-bottom-color: white;
+    }
     background-color: $backdrop_headerbar_bg_color;
     box-shadow: inset 0 1px $headerbar_border_color;
   }
@@ -117,7 +120,9 @@ headerbar,
     &.toggle:active {
       $_bg: lighten($headerbar_bg_color, if($variant==light, 0%, 1%));
       @include button(active, $_bg, $headerbar_fg_color);
-      border-color: rgb(20, 19, 19);
+      @if ($variant == 'dark') {
+        border-color: rgb(20, 19, 19);
+      }
       background-image: image(darken($_bg, 9%));
     }
 
