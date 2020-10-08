@@ -39,7 +39,7 @@ $_dark_border_color: rgb(20, 19, 19);;
                                   to(transparent));
 
   &:hover {
-    $_bg: if($c!=$selected_bg_color, transparentize(white, 0.8), lighten($c, 3%));
+    $_bg: if($c!=$selected_bg_color, transparentize(black, 0.8), lighten($c, 3%));
     background-image: -gtk-gradient(radial,
                                     center center, 0,
                                     center center, $circle_size,
@@ -47,7 +47,7 @@ $_dark_border_color: rgb(20, 19, 19);;
                                     to(transparent));
 
     &:backdrop {
-      $_bg: transparentize(white, 0.9);
+      $_bg: transparentize(black, 0.9);
       background-image: -gtk-gradient(radial,
                                       center center, 0,
                                       center center, $circle_size,
@@ -57,7 +57,7 @@ $_dark_border_color: rgb(20, 19, 19);;
   }
 
   &:active {
-    $_bg: if($c!=$selected_bg_color, transparentize(white, 0.9), darken($c, 2%));
+    $_bg: if($c!=$selected_bg_color, transparentize(black, 0.9), darken($c, 2%));
     background-image: -gtk-gradient(radial,
                                     center center, 0,
                                     center center, $circle_size,
