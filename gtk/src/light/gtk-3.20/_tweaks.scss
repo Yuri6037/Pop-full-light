@@ -946,3 +946,16 @@ scale {
 viewswitcher button stack box {
 	min-width: 115px;
 }
+
+window.csd.unified:not(.solid-csd):not(.fullscreen) {
+  &:not(.tiled):not(.tiled-top):not(.tiled-bottom):not(.tiled-left):not(.tiled-right):not(.maximized) {
+    &,
+    > decoration,
+    > decoration-overlay {
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
