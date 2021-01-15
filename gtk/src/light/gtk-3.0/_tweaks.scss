@@ -941,3 +941,8 @@ scale {
     }
   }
 }
+
+/* Hack workarround for https://gitlab.gnome.org/GNOME/libhandy/-/issues/380 */
+viewswitcher button stack box {
+	min-width: 115px;
+}
